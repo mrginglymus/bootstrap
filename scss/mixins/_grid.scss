@@ -1,3 +1,5 @@
+@import "compass/css3/flexbox";
+
 /// Grid system
 //
 // Generate semantic grid columns with these mixins.
@@ -22,8 +24,8 @@
 
 @mixin make-row($gutter: $grid-gutter-width) {
   @if $enable-flex {
-    display: flex;
-    flex-wrap: wrap;
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
   } @else {
     @include clearfix();
   }
@@ -45,7 +47,7 @@
 
 @mixin make-col-span($size, $columns: $grid-columns) {
   @if $enable-flex {
-    flex: 0 0 percentage($size / $columns);
+    @include flex(0 0 percentage($size / $columns));
   } @else {
     width: percentage($size / $columns);
   }

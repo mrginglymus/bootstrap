@@ -1,3 +1,5 @@
+@import "compass/css3/flexbox";
+
 //
 // Base styles
 //
@@ -6,7 +8,7 @@
   position: relative;
 
   @if $enable-flex {
-    display: flex;
+    @include display-flex(flex);
   } @else {
     display: table;
     // Prevent input groups from inheriting border styles from table cells when
@@ -20,7 +22,7 @@
     position: relative;
     z-index: 2;
     @if $enable-flex {
-      flex: 1;
+      @include flex(1);
     } @else {
       // IE9 fubars the placeholder attribute in text inputs and the arrows on
       // select elements in input groups. To fix it, we float the input. Details:

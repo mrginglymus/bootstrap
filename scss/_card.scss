@@ -1,3 +1,5 @@
+@import "compass/css3/flexbox";
+
 //
 // Base styles
 //
@@ -183,13 +185,13 @@
 @if $enable-flex {
   @include media-breakpoint-up(sm) {
     .card-deck {
-      display: flex;
-      flex-flow: row wrap;
+      @include display-flex(flex);
+      @include flex-flow(row wrap);
       margin-right: -.625rem;
       margin-left: -.625rem;
 
       .card {
-        flex: 1 0 0;
+        @include flex(1 0 0);
         margin-right: .625rem;
         margin-left: .625rem;
       }
@@ -222,8 +224,8 @@
 @include media-breakpoint-up(sm) {
   .card-group {
     @if $enable-flex {
-      display: flex;
-      flex-flow: row wrap;
+      @include display-flex(flex);
+      @include flex-flow(row wrap);
     } @else {
       display: table;
       width: 100%;
@@ -232,7 +234,7 @@
 
     .card {
       @if $enable-flex {
-        flex: 1 0 0;
+        @include flex(1 0 0);
       } @else {
         display: table-cell;
         vertical-align: top;
