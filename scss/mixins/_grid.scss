@@ -47,10 +47,9 @@
 
 @mixin make-col-span($size, $columns: $grid-columns) {
   @if $enable-flex {
-    @include flex(0 0 percentage($size / $columns));
-  } @else {
-    width: percentage($size / $columns);
+    @include flex(0 0 auto);
   }
+  width: percentage($size / $columns);
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {

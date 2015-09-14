@@ -12,6 +12,7 @@
     // Inner gutter via padding
     padding-left: ($gutter / 2);
     padding-right: ($gutter / 2);
+    width: 100%;
   }
   @each $breakpoint in map-keys($breakpoints) {
     @for $i from 1 through $columns {
