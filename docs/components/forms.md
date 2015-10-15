@@ -473,7 +473,7 @@ While Bootstrap will apply these styles in all browsers, Internet Explorer 11 an
 
 ## Readonly inputs
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.<
+Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
 
 {% example html %}
 <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
@@ -484,9 +484,9 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 Set heights using classes like `.form-control-lg`, and set widths using grid column classes like `.col-lg-*`.
 
 {% example html %}
-<input class="form-control form-control-lg" type="text" placeholder=".input-lg">
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
 <input class="form-control" type="text" placeholder="Default input">
-<input class="form-control form-control-sm" type="text" placeholder=".input-sm">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
 {% endexample %}
 
 {% example html %}
